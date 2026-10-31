@@ -1,35 +1,79 @@
-# 🎨 Blender Practice & Study
+# 🎨 Blender 3D Art & Study Gallery
 
-Blender를 배우며 튜토리얼과 레퍼런스를 참고해 연습한 3D 모델링 및 렌더링 작업물 저장소입니다.
+A showcase of 3D modeling, simulation, and rendering practices created with **Blender 3.6**.  
+High-resolution stills rendered using the **Cycles Render Engine**.
 
-👉 **[🌐 웹에서 3D 뷰어로 직접 돌려보기 (GitHub Pages)](https://ahnyeonjo.github.io/blender/)**  
-*(마우스 드래그로 360도 회전, 확대/축소 가능)*
-
-> 💡 **Notice**: 본 저장소의 작업물들은 학습 및 실습 목적으로 제작되었으며, 다양한 아티스트 분들의 공개 튜토리얼 및 레퍼런스를 참고하였습니다.
+> 💡 **Notice**: All artworks in this repository were created for non-commercial personal study and practice purposes, referencing various public tutorials and creative artworks by 3D artists.
 
 ---
 
-## 📁 3D Models & Projects
+## 🖼️ Gallery & Project Showcase
 
-| 모델 / 파일 | 3D 추출 파일 (.glb) | 내용 / 참고 레퍼런스 |
-|---|---|---|
-| `donuttutorial.blend` | `donuttutorial.glb` | Blender Guru의 도넛 튜토리얼 실습 |
-| `house.blend` | `house.glb` | 건물/하우스 모델링 연습 |
-| `mushroom_vase.blend` | `mushroom_vase.glb` | 버섯 화병 오브젝트 모델링 연습 |
-| `pillow,blanket.blend` | `pillow,blanket.glb` | 베개 및 담요 패브릭/클로스(Cloth) 시뮬레이션 연습 |
-| `untitled.blend` | `untitled.glb` | 기타 3D 모델링 연습 |
-| `Blender 3.0 HotKeys.pdf` | - | 블렌더 기본 단축키 가이드 |
+### 🍄 Mushroom Terrarium in a Bottle
+Stylized glass bottle terrarium containing mushrooms, foliage, and ambient sparkles with glass refractions.
 
----
+<p align="center">
+  <img src="renders/mushroom_vase.png" alt="Mushroom Terrarium in a Bottle" width="600" />
+</p>
 
-## 🚀 GitHub Pages 3D 갤러리 켜는 법
-1. GitHub 저장소 상단 **Settings** 메뉴로 이동합니다.
-2. 좌측 메뉴에서 **Pages**를 클릭합니다.
-3. **Build and deployment > Branch** 항목에서 `main` 브랜치를 선택하고 **Save**를 누릅니다.
-4. 약 1~2분 뒤 `https://ahnyeonjo.github.io/blender/` 주소로 접속하면 웹 브라우저에서 바로 3D 모형을 인터랙티브하게 감상할 수 있습니다!
+* **Source File**: [`mushroom_vase.blend`](mushroom_vase.blend)
+* **Highlights**: Glass shader refraction, organic mushroom modeling, ambient lighting
 
 ---
 
-## 📌 Disclaimer / Credits
-- 본 저장소의 작업물은 **비상업적 개인 학습 목적**으로 업로드되었습니다.
-- 각 작업물에 대한 아이디어 및 원작 레퍼런스의 저작권은 해당 원작자 및 튜토리얼 제작자에게 있습니다.
+### 🏠 Snowy Winter Cabin
+A cozy, snow-draped cottage scene with glowing warm windows, surrounded by winter pine trees.
+
+<p align="center">
+  <img src="renders/house.png" alt="Snowy Winter Cabin" width="600" />
+</p>
+
+* **Source File**: [`house.blend`](house.blend)
+* **Highlights**: Volumetric snow layers, architectural modeling, warm interior emission lighting
+
+---
+
+### 🍩 Donut Tutorial Study
+The classic 3D initiation journey inspired by Blender Guru's famous tutorial series.
+
+<p align="center">
+  <img src="renders/donuttutorial.png" alt="Donut Tutorial Study" width="600" />
+</p>
+
+* **Source File**: [`donuttutorial.blend`](donuttutorial.blend)
+* **Highlights**: Subsurface scattering, glossy icing sculpting, procedural texturing
+
+---
+
+### 🛏️ Pillow & Blanket (Cloth Simulation)
+Bedding modeling practice exploring soft-body fabric dynamics, realistic wrinkles, and cloth simulation.
+
+<p align="center">
+  <img src="renders/pillow_blanket.png" alt="Pillow and Blanket Simulation" width="600" />
+</p>
+
+* **Source File**: [`pillow,blanket.blend`](pillow,blanket.blend)
+* **Highlights**: Cloth physics simulation, organic folds, soft-surface modeling
+
+---
+
+### 📦 House Blocking & Structure Practice
+Basic architectural blocking focusing on proportions, geometry, and clean topology.
+
+<p align="center">
+  <img src="renders/untitled.png" alt="House Structure Practice" width="600" />
+</p>
+
+* **Source File**: [`untitled.blend`](untitled.blend)
+* **Highlights**: Foundational hard-surface modeling, scale and proportion study
+
+---
+
+## 📚 References & Cheatsheet
+* [`Blender 3.0 HotKeys.pdf`](Blender%203.0%20HotKeys.pdf) — Quick shortcut guide and reference sheet for Blender navigation and modeling workflows.
+
+---
+
+## 📌 Credits & Disclaimer
+* All models and renders are intended solely for educational, personal skill development, and portfolio purposes.
+* All original ideas, designs, and tutorial concepts belong to their respective creators and artists.
