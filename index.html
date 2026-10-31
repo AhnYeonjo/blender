@@ -14,40 +14,56 @@
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #0f1117;
+      background: #12141a;
       color: #e6edf3;
       height: 100vh;
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      transition: background 0.3s ease;
+    }
+    body.light-theme {
+      background: #f6f8fa;
+      color: #24292f;
     }
     header {
-      padding: 16px 24px;
-      background: #161b22;
+      padding: 14px 20px;
+      background: #1c2128;
       border-bottom: 1px solid #30363d;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
+      transition: all 0.3s ease;
+    }
+    body.light-theme header {
+      background: #ffffff;
+      border-bottom-color: #d0d7de;
     }
     .title-group h1 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 600;
-      color: #f0f6fc;
       display: flex;
       align-items: center;
       gap: 8px;
     }
+    body.light-theme .title-group h1 {
+      color: #1f2328;
+    }
     .title-group p {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #8b949e;
       margin-top: 2px;
+    }
+    body.light-theme .title-group p {
+      color: #656d76;
     }
     .controls {
       display: flex;
       gap: 8px;
       align-items: center;
+      flex-wrap: wrap;
     }
     .btn {
       background: #21262d;
@@ -58,16 +74,38 @@
       font-size: 0.85rem;
       cursor: pointer;
       transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    body.light-theme .btn {
+      background: #f6f8fa;
+      border-color: #d0d7de;
+      color: #24292f;
     }
     .btn:hover {
       background: #30363d;
-      border-color: #8b949e;
       color: #fff;
+    }
+    body.light-theme .btn:hover {
+      background: #eaeef2;
+      color: #0969da;
     }
     .btn.active {
       background: #238636;
       border-color: #2ea043;
       color: #fff;
+    }
+    .slider-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: #8b949e;
+      margin-left: 8px;
+    }
+    .slider-group input[type="range"] {
+      width: 80px;
     }
     .main-container {
       flex: 1;
@@ -76,26 +114,31 @@
       overflow: hidden;
     }
     .sidebar {
-      width: 260px;
+      width: 250px;
       background: #161b22;
       border-right: 1px solid #30363d;
-      padding: 16px;
+      padding: 14px;
       display: flex;
       flex-direction: column;
       gap: 8px;
       overflow-y: auto;
+      transition: all 0.3s ease;
+    }
+    body.light-theme .sidebar {
+      background: #ffffff;
+      border-right-color: #d0d7de;
     }
     .sidebar h2 {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: #8b949e;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .model-card {
       display: flex;
       flex-direction: column;
-      padding: 12px;
+      padding: 10px 12px;
       border-radius: 8px;
       background: #21262d;
       border: 1px solid #30363d;
@@ -103,31 +146,53 @@
       transition: all 0.2s ease;
       text-align: left;
     }
+    body.light-theme .model-card {
+      background: #f6f8fa;
+      border-color: #d0d7de;
+    }
     .model-card:hover {
       background: #2b323b;
       border-color: #58a6ff;
+    }
+    body.light-theme .model-card:hover {
+      background: #eef2f6;
+      border-color: #0969da;
     }
     .model-card.active {
       background: #1f3a5f;
       border-color: #388bfd;
     }
+    body.light-theme .model-card.active {
+      background: #ddf4ff;
+      border-color: #0969da;
+    }
     .model-card .name {
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #f0f6fc;
+    }
+    body.light-theme .model-card .name {
+      color: #1f2328;
     }
     .model-card .desc {
       font-size: 0.75rem;
       color: #8b949e;
-      margin-top: 4px;
+      margin-top: 3px;
+    }
+    body.light-theme .model-card .desc {
+      color: #656d76;
     }
     .viewer-area {
       flex: 1;
       position: relative;
-      background: radial-gradient(circle at center, #1f242d 0%, #0d1117 100%);
+      background: radial-gradient(circle at center, #262c38 0%, #101319 100%);
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: background 0.3s ease;
+    }
+    body.light-theme .viewer-area {
+      background: radial-gradient(circle at center, #ffffff 0%, #e5e9f0 100%);
     }
     model-viewer {
       width: 100%;
@@ -136,25 +201,27 @@
     }
     .instruction-badge {
       position: absolute;
-      bottom: 20px;
+      bottom: 16px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(22, 27, 34, 0.85);
+      background: rgba(22, 27, 34, 0.88);
       backdrop-filter: blur(8px);
       padding: 8px 16px;
       border-radius: 20px;
       border: 1px solid #30363d;
       font-size: 0.8rem;
-      color: #8b949e;
+      color: #c9d1d9;
       pointer-events: none;
       user-select: none;
       display: flex;
-      gap: 12px;
+      gap: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
-    .instruction-badge span {
-      display: flex;
-      align-items: center;
-      gap: 4px;
+    body.light-theme .instruction-badge {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: #d0d7de;
+      color: #24292f;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     @media (max-width: 768px) {
@@ -163,14 +230,19 @@
       }
       .sidebar {
         width: 100%;
-        max-height: 160px;
+        max-height: 140px;
         flex-direction: row;
         overflow-x: auto;
         border-right: none;
         border-top: 1px solid #30363d;
       }
       .model-card {
-        min-width: 180px;
+        min-width: 160px;
+      }
+      .instruction-badge {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+        bottom: 10px;
       }
     }
   </style>
@@ -179,11 +251,16 @@
   <header>
     <div class="title-group">
       <h1>🎨 Blender 3D Gallery</h1>
-      <p>Blender 3D 학습 및 실습 모델 인터랙티브 뷰어</p>
+      <p>마우스로 드래그하여 360도 회전 및 휠로 줌인/줌아웃해보세요</p>
     </div>
     <div class="controls">
+      <button id="toggle-theme" class="btn">☀️ 밝은 배경</button>
       <button id="toggle-autorotate" class="btn active">🔄 자동 회전</button>
-      <button id="reset-cam" class="btn">🎯 시점 리셋</button>
+      <button id="reset-cam" class="btn">🎯 화면 맞춤 (리셋)</button>
+      <div class="slider-group">
+        <label for="exposure-slider">💡 밝기</label>
+        <input type="range" id="exposure-slider" min="0.5" max="2.5" step="0.1" value="1.5">
+      </div>
     </div>
   </header>
 
@@ -191,27 +268,27 @@
     <div class="sidebar">
       <h2>3D Models</h2>
       
-      <div class="model-card active" data-src="donuttutorial.glb" data-title="도넛 (Donut Tutorial)" data-desc="Blender Guru 튜토리얼 실습">
+      <div class="model-card active" data-src="donuttutorial.glb" data-title="🍩 Donut">
         <div class="name">🍩 Donut</div>
-        <div class="desc">도넛 튜토리얼 실습</div>
+        <div class="desc">도넛 튜토리얼</div>
       </div>
 
-      <div class="model-card" data-src="house.glb" data-title="하우스 (House Modeling)" data-desc="건물/하우스 모델링 연습">
+      <div class="model-card" data-src="house.glb" data-title="🏠 House">
         <div class="name">🏠 House</div>
-        <div class="desc">건물/하우스 모델링</div>
+        <div class="desc">하우스 모델링</div>
       </div>
 
-      <div class="model-card" data-src="mushroom_vase.glb" data-title="버섯 화병 (Mushroom Vase)" data-desc="버섯 모양 오브젝트">
+      <div class="model-card" data-src="mushroom_vase.glb" data-title="🍄 Mushroom Vase">
         <div class="name">🍄 Mushroom Vase</div>
-        <div class="desc">버섯 화병 오브젝트</div>
+        <div class="desc">버섯 화병</div>
       </div>
 
-      <div class="model-card" data-src="pillow,blanket.glb" data-title="베개 & 담요 (Pillow & Blanket)" data-desc="Cloth 시뮬레이션 실습">
+      <div class="model-card" data-src="pillow,blanket.glb" data-title="🛏️ Pillow & Blanket">
         <div class="name">🛏️ Pillow & Blanket</div>
         <div class="desc">패브릭 시뮬레이션</div>
       </div>
 
-      <div class="model-card" data-src="untitled.glb" data-title="Untitled Study" data-desc="모델링 연습">
+      <div class="model-card" data-src="untitled.glb" data-title="📦 Untitled">
         <div class="name">📦 Untitled</div>
         <div class="desc">모델링 연습</div>
       </div>
@@ -223,20 +300,21 @@
         src="donuttutorial.glb"
         alt="Blender 3D Model"
         auto-rotate
-        rotation-per-second="30deg"
+        rotation-per-second="25deg"
         camera-controls
-        touch-action="pan-y"
-        shadow-intensity="1.5"
-        shadow-softness="0.8"
-        exposure="1.0"
+        bounds="tight"
+        interpolation-decay="200"
+        shadow-intensity="1.2"
+        shadow-softness="0.5"
+        exposure="1.5"
         environment-image="neutral"
       >
       </model-viewer>
 
       <div class="instruction-badge">
-        <span>🖱️ 좌클릭 드래그: 360° 회전</span>
-        <span>🔍 휠: 줌 인/아웃</span>
-        <span>🖱️ 우클릭 드래그: 위치 이동</span>
+        <span>🖱️ 좌클릭: 회전</span>
+        <span>🔍 휠: 줌</span>
+        <span>🖱️ 우클릭: 이동</span>
       </div>
     </div>
   </div>
@@ -246,6 +324,8 @@
     const cards = document.querySelectorAll('.model-card');
     const autoRotateBtn = document.getElementById('toggle-autorotate');
     const resetCamBtn = document.getElementById('reset-cam');
+    const themeBtn = document.getElementById('toggle-theme');
+    const exposureSlider = document.getElementById('exposure-slider');
 
     cards.forEach(card => {
       card.addEventListener('click', () => {
@@ -253,6 +333,9 @@
         card.classList.add('active');
         const src = card.getAttribute('data-src');
         viewer.src = src;
+        // Reset camera to auto-fit new model bounds
+        viewer.cameraOrbit = 'auto auto auto';
+        viewer.cameraTarget = 'auto auto auto';
       });
     });
 
@@ -269,8 +352,19 @@
     });
 
     resetCamBtn.addEventListener('click', () => {
-      viewer.cameraOrbit = '0deg 75deg 105%';
+      viewer.cameraOrbit = 'auto auto auto';
       viewer.cameraTarget = 'auto auto auto';
+    });
+
+    let isLight = false;
+    themeBtn.addEventListener('click', () => {
+      isLight = !isLight;
+      document.body.classList.toggle('light-theme', isLight);
+      themeBtn.textContent = isLight ? '🌙 어두운 배경' : '☀️ 밝은 배경';
+    });
+
+    exposureSlider.addEventListener('input', (e) => {
+      viewer.exposure = parseFloat(e.target.value);
     });
   </script>
 </body>
